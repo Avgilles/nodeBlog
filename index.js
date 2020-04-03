@@ -4,6 +4,9 @@ const express= require('express');
 const mongoose= require('mongoose');
 
 const app = express();
+
+
+
 const blogRouter = require('./blog.router');
 
 // moteur template
@@ -16,7 +19,9 @@ app.set('views', './views');
 const PORT= 9000;
 const HOST = 'localhost';
 
+app.use(express.static('./public'));
 app.use('/', blogRouter);
+
 
 // il faut placer les valeurs suivante dqns la chaine
 
