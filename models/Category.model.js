@@ -10,8 +10,8 @@ console.log(shortid.generate());
         'type': String,
         'default': shortid.generate
       },
-    name: { type : String,required:true}, 
-  }
+    title: { type : String,required:true}, 
+  },{collection:'Categorie'}
   
   );
   module.exports = mongoose.model('Categorie', categorieSchema);

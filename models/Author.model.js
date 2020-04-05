@@ -10,8 +10,8 @@ console.log(shortid.generate());
         'type': String,
         'default': shortid.generate
       },
-    title: { type : String,required:true},  
-  }
+    name: { type : String,required:true},  
+  },{collection:'Authors'}
   
   );
 

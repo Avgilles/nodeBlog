@@ -4,4 +4,24 @@ block variables
     - let title = 'Accueil';
  
 block content
-    h1 Hello homepage!
+    h1(class="center") Bienvenue sur mon blog Node
+    p(class="center") Voici la liste des derniers articles du blog
+    
+    
+    
+    
+    each article in articles
+        ul(class="container")
+            li(style={
+                'list-style':'none',
+                'margin-bottom':'20px',
+
+                })
+                a(href="/article/"+article._id class='read-more')=article.title
+            li(style={
+                'list-style':'none',
+                'font-family': 'Montserrat',
+
+                })= article.content
+            li(class="italic")= 'Publié le ' + article.dateCreated + ' par ' + article.author.name + ' ' +article.category.title 
+                

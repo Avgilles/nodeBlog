@@ -24,7 +24,6 @@ app.use('/', blogRouter);
 
 
 // il faut placer les valeurs suivante dqns la chaine
-
 // process.env.DB_USER;
 // process.env.DB_PASSWORD;
 // process.env.DB_HOST;

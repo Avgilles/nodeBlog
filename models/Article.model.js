@@ -15,7 +15,5 @@ console.log(shortid.generate());
     content: { type : String,required:true},
     author :  { type : String, required : true, ref : 'Authors' },
     category : { type : String, required : true, ref : 'Categorie' }
-  }
-  
-  );
+  }, {collection:'Articles'});
   module.exports = mongoose.model('Articles', articleSchema);

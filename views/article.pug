@@ -1,11 +1,24 @@
 extends layout.pug
  
 block variables
-    - let title = 'Contact';
+    - let title = 'Article';
  
 block content
-    h1 Contact
-    form(action="contact/send", method="post")
-        input(type="text", name="text")
-        textarea(name="message", cols="30", rows="10")
-        button(type="submit") Send
+    div(style={
+        'align-items':'center',
+        'justify-content':'center'
+
+        })
+        h1(style={
+        'font-family': 'Montserrat',
+        'text-align': 'center'
+
+        })= article.title
+        h2(style={
+        'font-family': 'Montserrat',
+        'text-align':'center',
+        })= "Ecrit par "+article.author.name 
+        p(style={
+        'font-family': 'Montserrat',
+        'text-align':'center',
+        })= article.content
